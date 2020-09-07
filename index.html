@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual - Logitech</title>
+</head>
+
+<body>
+
+    <!--produtos da loja-->
+    <div id="produtos">
+
+    </div>
+    
+     <!--carrinho de compras-->
+    <div id="carrinho">
+
+    </div>
+   
+    <script>
+        const itens = 
+        [
+            {
+                id: 0,
+                nome: 'Mouse Logitech M590 - <b>Vermelho</b>',
+                img: 'mouseVermelho.jpg',
+                quantidade: 0
+
+            },
+            {
+                id: 1,
+                nome: 'Mouse Logitech M590 - <b>Preto</b>',
+                img: 'mousePreto.jpg',
+                quantidade: 0
+            },
+            {
+                id: 2,
+                nome: 'Mouse Logitech M590 - <b>Cinza</b>',
+                img: 'mouseCinza.jpg',
+                quantidade: 0
+            },
+
+        ]
+
+        inicializarLoja = () => 
+        {
+            var containerProdutos = document.getElementById('produtos');
+            //document.getElementsByName('Mouse Logitech M590 - Vermelho').style.color = 'red';
+
+            itens.map((val)=>
+            {
+                containerProdutos.innerHTML+=
+                `
+                <div class="produto-single">
+                    <img src="`+val.img+`"/>
+                    <p>`+val.nome+`</p>
+                    <a key="`+val.id+`" href="#">Adicionar ao carrinho!<a/>
+                </div>
+                `
+                //const item = null;
+
+                for(item in itens)
+                {
+                
+                if(val.nome.includes("Vermelho"))
+                {
+                    console.log("Mouse VERMELHOOOOOOOOOOOOOOOOOOOO")
+                    //val.nome.fontcolor("red")
+                }
+                else if (val.nome.includes("Preto"))
+                {
+                    console.log("Mouse PRETOOOOOOOOOOOOOOOOOOO")
+                   // val.nome.fontcolor("black")
+                }
+                else
+                {
+                    console.log("É CINZA")
+                  //  val.nome.fontcolor("grey")
+                }   
+                }
+
+            })
+               
+        }
+
+        inicializarLoja();
+
+        atualizarCarrinho = () =>
+        {
+            
+        }
+
+        var links = document.getElementsByTagName('a');
+
+        for(var i = 0; i < links.length; i++)
+        {
+            links[i].addEventListener("click", function()
+            {
+                let 
+            })
+        }
+
+    </script>
+
+</body>
+
+</html>
